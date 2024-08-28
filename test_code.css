@@ -1,0 +1,49 @@
+.main-header {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: saturate(100%) (20px);
+  padding: 1.5rem 0;
+  font-family: "Playfair Display", serif;
+}
+
+.main-header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  list-style: none;
+}
+
+.main-header nav ul li a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.main-header nav ul li a:hover {
+  color: #333;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .main-header {
+    padding: 1rem 0;
+  }
+
+  .main-header nav ul {
+    gap: 2.5rem;
+  }
+
+  .main-header nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+<!-- <header class="main-header">
+<nav>
+    <ul>
+        <li><a href="#">Wines By Region</a></li>
+        <li><a href="#">Red Wine</a></li>
+        <li><a href="#">White Wine</a></li>
+        <li><a href="#">Sparkling</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+</header> -->
