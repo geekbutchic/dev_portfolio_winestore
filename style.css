@@ -126,7 +126,7 @@ textarea {
 
 .side-menu ul {
   list-style: none;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .side-menu ul li a {
@@ -154,4 +154,20 @@ textarea {
     left: 0; /* Slide in the menu */
   }
 }
+
+/* Tablet and larger: show header, hide hamburger */
+@media (min-width: 481px) {
+  .hamburger {
+    display: none; /* Hide hamburger menu for tablet and larger viewports */
+  }
+
+  .main-header nav {
+    display: block; /* Show full header for tablet and larger viewports */
+  }
+}
+
+
+/* =============== Header CSS =============== */
+
+
 
