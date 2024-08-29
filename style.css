@@ -103,24 +103,29 @@ textarea {
 
 /* =============== Header Container ===============*/
 
+/* Mobile-first styles */
 .hamburger {
-  display: none; /* Hide by default */
+  display: block; /* Show by default for mobile */
   cursor: pointer;
   font-size: 1.5rem;
   position: absolute;
   right: 20px;
-  top: 15px;
+  top: 100px;
   color: #333;
+}
+
+.main-header nav {
+  display: none; /* Hide the navigation on mobile */
 }
 
 .side-menu {
   position: fixed;
   top: 0;
-  left: -100%; /* Hidden off-screen */
+  left: -100%; /* Hidden off-screen by default */
   width: 70%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000; /* Ensure it appears above other elements */
+  z-index: 1000;
   transition: left 0.5s ease;
 }
 
@@ -142,32 +147,59 @@ textarea {
   color: grey;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  .main-header {
-    position: relative; /* Make the header a positioning context */
-  }
-  .side-menu.open {
-    left: 0; /* Slide in the menu */
-  }
+/* Slide in the menu when open */
+.side-menu.open {
+  left: 0;
 }
 
-/* Tablet and larger: show header, hide hamburger */
-@media (min-width: 481px) {
+/* Tablet and larger screens (min-width: 768px) */
+@media (min-width: 768px) {
   .hamburger {
-    display: none; /* Hide hamburger menu for tablet and larger viewports */
+    display: none; /* Hide hamburger menu */
+  }
+
+  .side-menu {
+    display: none; /* Hide side menu for tablet and larger screens */
+  }
+
+  .main-header {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: saturate(100%) blur(20px);
+    padding: 1.5rem 0;
+    font-family: "Playfair Display", serif;
+    position: relative;
   }
 
   .main-header nav {
-    display: block; /* Show full header for tablet and larger viewports */
+    display: block;
+  }
+
+  .main-header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    list-style: none;
+  }
+
+  .main-header nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  .main-header nav ul li a:hover {
+    color: #333;
   }
 }
 
-
-/* =============== Header CSS =============== */
-
-
-
+@media (min-width: 481px) and (max-width: 840px) {
+  .main-header {
+    padding: 1rem 0;
+  }
+  .main-header nav ul {
+    gap: 2.5rem;
+  }
+  .main-header nav ul li a {
+    font-size: 1rem;
+  }
+}
