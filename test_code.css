@@ -102,21 +102,7 @@
 }
 /* ============================================= */
 
-<!-- <header class="main-header">
-<div class="hamburger">
-    <i class="fas fa-bars"></i>
-</div>
-<nav class="side-menu">
-    <ul>
-        <li><a href="#">Wines By Region</a></li>
-        <li><a href="#">Red Wine</a></li>
-        <li><a href="#">White Wine</a></li>
-        <li><a href="#">Sparkling</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Cart <i class="fa-solid fa-bag-shopping fa-sm"></i></a></li>
-    </ul>
-</nav>
-</header> -->
+
 
 /* ===================================== */
 
@@ -184,3 +170,6 @@
     color: #333;
   }
 }
+
+/* =====================================*/
+
