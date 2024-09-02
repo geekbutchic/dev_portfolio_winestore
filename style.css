@@ -220,6 +220,7 @@ textarea {
   list-style: none;
   margin-top: 2rem;
   width: 9.5rem;
+  border-radius: 5px;
 }
 
 .dropdown-menu.show {
